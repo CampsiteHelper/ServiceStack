@@ -536,11 +536,7 @@
                             });
                         }, parseInt(opt.heartbeatIntervalMs) || 10000);
                     }
-                    if (opt.unRegisterUrl) {
-                        $(window).unload(function () {
-                            $.post(opt.unRegisterUrl, null, function (r) { });
-                        });
-                    }
+                  
                     $.ss.updateSubscriberUrl = opt.updateSubscriberUrl;
                     $.ss.updateChannels((opt.channels || "").split(','));
                 }
